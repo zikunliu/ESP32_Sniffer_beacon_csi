@@ -29,31 +29,31 @@ CSI_DATA,2,1c:b9:c4:b5:a9:58,ff:ff:ff:ff:ff:ff,-67,10,0,0,0,0,0,0,0,-96,0,1,0,37
 CSI_DATA,3,1c:b9:c4:b5:a9:58,ff:ff:ff:ff:ff:ff,-67,10,0,0,0,0,0,0,0,-96,0,1,0,574595,0,220,0,128,1, [-36,-64,13,0,5,1,6,0,10,-12,13,-15,15,-20,17,-26,20,-28,19,-31,19,-31,17,-32,13,-30,10,-25,7,-22,1,-16,-2,-9,-10,-3,-16,4,-24,5,-32,8,-37,7,-40,7,-38,6,-42,4,-34,-1,-33,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-5,4,-7,-1,-6,-4,-8,-9,-4,-11,-4,-13,-2,-15,-1,-16,2,-17,4,-15,3,-13,5,-9,4,-6,4,-3,1,2,1,8,-1,8,-3,15,-3,17,-4,20,-4,24,-6,24,-8,22,-8,23,-6,22,-3,17]
 CSI_DATA,4,1c:b9:c4:b5:a9:58,ff:ff:ff:ff:ff:ff,-66,10,0,0,0,0,0,0,0,-96,0,1,0,678025,0,220,0,128,1, [-36,-64,13,0,1,0,7,-3,10,-13,13,-17,13,-22,15,-30,16,-30,15,-37,17,-38,12,-40,6,-31,10,-26,6,-24,3,-19,-2,-11,-8,-2,-15,2,-23,8,-29,13,-33,16,-38,13,-40,11,-37,5,-35,9,-27,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-7,2,-7,-3,-8,-6,-7,-10,-4,-13,-4,-13,-2,-13,-1,-14,2,-17,2,-14,3,-11,5,-9,4,-6,3,-2,2,3,2,7,0,11,1,16,0,19,0,23,-3,25,-3,27,-2,25,-3,26,-4,23,-1,19]
 
-|  Type    | Name               | Description
-|  --------| ----               | ------------
-|          | CSI_DATA           | Data type is CSI
-|  uint32  | seq                | Received data sequence
-|  uint8   | mac                | Source MAC address
-|  uint8   | dmac               | Destination MAC address
-|  int     | rssi               | Received Signal Strength Indicator of packet with unit: dBm
-|  uint    | rate               | PHY rate. Only valid for non HT(11bg) packet
-|  uint    | sig_mode           | 0: non HT(11bg) packet; 1: HT(11n) packet; 3: VHT(11ac) packet
-|  uint    | mcs                | Modulation Coding Scheme
-|  uint    | bandwidth          | Channel Bandwidth. 0: 20MHz; 1: 40MHz;
-|  uint    | aggregation        | 0: MPDU packet; 1: AMPDU packet
-|  uint    | stbc               | Space Time Block Code. 0: non STBC packet; 1: STBC packet
-|  uint    | fec_coding         | Flag is set for 11n packets which are LDPC
-|  uint    | sgi                | Short Guide Interval. 0: Long GI; 1: Short GI
-|  uint    | noise_floor        | Noise floor of Radio Frequency Module. unit: dBm
-|  uint    | ampdu_cnt          | Ampdu cnt
-|  uint    | secondary_channel  | Secondary channel. 0: none; 1: above; 2: below;
-|  uint    | timestamp          | The local time when this packet is received. unit: microsecond
-|  uint    | ant                | Antenna number that receive packet, 0 and 1
-|  uint    | sig_len            | Length of packet
-|  uint    | rx_state           | State of the packet. 0: no error; others: it contain error
-|  uint16  | len                | Length of csi data
-|  bool    | first_word         | Flag of first four bytes of the CSI Data. 0: vaild; 1: invaild
-|  int8    | data               | Buffer of CSI Data. The data are interleaved and first one is imaginary part, second one is real part.
+|  Data Type | Variable Name      | Description
+|  --------  | ----               | ------------
+|            | CSI_DATA           | Data type is CSI
+|  uint32    | seq                | Received data sequence
+|  uint8     | mac                | Source MAC address
+|  uint8     | dmac               | Destination MAC address
+|  int       | rssi               | Received Signal Strength Indicator of packet with unit: dBm
+|  uint      | rate               | PHY rate. Only valid for non HT(11bg) packet
+|  uint      | sig_mode           | 0: non HT(11bg) packet; 1: HT(11n) packet; 3: VHT(11ac) packet
+|  uint      | mcs                | Modulation Coding Scheme
+|  uint      | bandwidth          | Channel Bandwidth. 0: 20MHz; 1: 40MHz;
+|  uint      | aggregation        | 0: MPDU packet; 1: AMPDU packet
+|  uint      | stbc               | Space Time Block Code. 0: non STBC packet; 1: STBC packet
+|  uint      | fec_coding         | Flag is set for 11n packets which are LDPC
+|  uint      | sgi                | Short Guide Interval. 0: Long GI; 1: Short GI
+|  uint      | noise_floor        | Noise floor of Radio Frequency Module. unit: dBm
+|  uint      | ampdu_cnt          | Ampdu cnt
+|  uint      | secondary_channel  | Secondary channel. 0: none; 1: above; 2: below;
+|  uint      | timestamp          | The local time when this packet is received. unit: microsecond
+|  uint      | ant                | Antenna number that receive packet, 0 and 1
+|  uint      | sig_len            | Length of packet
+|  uint      | rx_state           | State of the packet. 0: no error; others: it contain error
+|  uint16    | len                | Length of csi data
+|  bool      | first_word         | Flag of first four bytes of the CSI Data. 0: vaild; 1: invaild
+|  int8      | data               | Buffer of CSI Data. The data are interleaved and first one is imaginary part, second one is real part.
 
 ## Get Beacon CSI From AP
 
