@@ -4,7 +4,7 @@ The main purpose of this project is to extract AP beacon packet Channel state in
 
 ## Supported versions and ESP32 target
 
-| ESP-CSI | Dependent ESP-IDF |        support Target       |
+| ESP-CSI | Dependent ESP-IDF |        Support Target       |
 | :-----: | :---------------: | :-------------------------: |
 |  main   |   release/v5.0    | ESP32 / ESP32-S2 / ESP32-C3 |
 
@@ -18,7 +18,7 @@ The fillowing types of packets can be capture by ESP:
 
 The above three types are most mojority types of 802.11 frame. You could choose to fillter one or more types that you need to receive by ESP.
 
-## beacon frame specifiction
+## Beacon frame specifiction
 Beacon frame is a subtype of 802.11 management fram with subtype(0x80). Beacon is a periodicity frame and sent by AP in every certain interval to announce that AP is exist and wait for connect. In addtion, beacon frame is a boradcast frame with destination address(FF:FF:FF:FF:FF:FF).
 
 ## CSI Data Format
